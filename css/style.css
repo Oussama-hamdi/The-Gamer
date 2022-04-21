@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* Start Variables */
+:root {
+  --bg-color: rgba(0, 0, 21, 1);
+  --color: #ffa500;
+  --transition: 0.4s;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  height: 5000px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 67px;
+  position: relative;
+}
+header .logo {
+  font-size: 1.3rem;
+  color: var(--color);
+  font-weight: bold;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+header .logo:hover,
+header .container ul li a:hover {
+  color: white;
+}
+header .container .menu {
+  flex: 0.9;
+  display: flex;
+  justify-content: flex-end;
+}
+header .menu ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  header .menu ul {
+    display: none;
+  }
+}
+header .menu ul li {
+  margin-right: 35px;
+}
+header .menu ul li a {
+  color: var(--color);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px;
+}
+header .container .icon {
+  color: var(--color);
+  display: none;
+  align-self: center;
+  justify-self: end;
+}
+header .container .icon:hover {
+  color: white;
+  transition: var(--transition);
+}
+@media (max-width: 767px) {
+  header .container .icon {
+    display: block;
+    font-size: 24px;
+  }
+  header .menu ul.active {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    z-index: 10;
+    width: 100%;
+  }
+  header .menu ul.active li {
+    width: 100%;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  header .menu ul.active li:hover {
+    background-color: white;
+  }
+  header .menu ul.active li:hover a {
+    color: black;
+  }
+}
