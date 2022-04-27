@@ -497,3 +497,60 @@ main .games-store-list .text span {
 }
 /* End Events */
 /* End Main */
+/* Start Footer */
+footer {
+  padding-bottom: var(--section-padding);
+}
+footer .contact {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  footer .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+}
+footer .contact-list {
+  color: white;
+  margin-top: 15px;
+}
+footer .contact-list h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+footer .contact-list h5 span {
+  padding-right: 7px;
+}
+footer .contact-list p {
+  font-size: 18px;
+  line-height: 1.3;
+}
+footer .contact-list .email-contact {
+  width: 80%;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+footer .contact-list .email-contact input {
+  margin: 8px 0;
+  outline: none;
+  padding: 5px 10px;
+}
+footer .contact-list .email-contact button {
+  width: 100px;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  padding: 5px 10px;
+  text-transform: capitalize;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+}
+/* End Footer */
